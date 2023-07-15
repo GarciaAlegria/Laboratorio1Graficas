@@ -20,6 +20,23 @@ void render(Framebuffer &framebuffer)
     Color green = Color(0, 255, 0);
     Color black = Color(0, 0, 0);
 
+    // Definir polígono 1
+    std::vector<Vertex> p1 = {
+        {165, 380},
+        {185, 360},
+        {180, 330},
+        {207, 345},
+        {233, 330},
+        {230, 360},
+        {250, 380},
+        {220, 385},
+        {205, 410},
+        {193, 383}
+    };
+
+    // Dibujar polígono 1 con color amarillo y borde blanco
+    framebuffer.polygon(p1, white);
+    framebuffer.fillPolygon(p1, yellow);
 
     // Definir polígono 2
     std::vector<Vertex> p2 = {
@@ -28,8 +45,6 @@ void render(Framebuffer &framebuffer)
         {339, 251},
         {374, 302}
     };
-
-  
 
     // Dibujar polígono 2 con color azul y borde blanco
     framebuffer.polygon(p2, white);
